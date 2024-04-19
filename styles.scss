@@ -1,0 +1,45 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-bg1: #1A4BFC;
+    --color-bg2: #7000E1;
+    --color1: #1A4BFC;
+    --color2: #7000E1;
+    --color-interactive: #be39fb;
+    --circle-size: 88%;
+    --blending: hard-light;
+}
+
+.gradient-bg {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+svg {
+    display: none;
+}
+
+.gradient-container {
+    width: 100%;
+    height: 100%;
+}
+
+.g1 {
+    position: absolute;
+    background: radial-gradient(cricle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
+    mix-blend-mode: var(--blending);
+
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2);
+    left:  calc(50% - var(--circle-size) / 2);
+
+    opacity: 1;
+}
